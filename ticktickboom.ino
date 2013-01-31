@@ -553,10 +553,9 @@ void setup() {
  lcd.begin(16, 2);       
  // set the cursor to column 0, line 0
  lcd.setCursor(0, 0);
- lcd.print("Push button");
- lcd.setCursor(0, 1);
- lcd.print("to start.");
- 
+ lcd.print("*Tick Tick Boom*");
+lcd.setCursor(1, 1);
+lcd.print("Push to start!");
 }
 
 // main loop
