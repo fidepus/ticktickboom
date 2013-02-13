@@ -24,6 +24,7 @@
 
 // include the library code:
 #include <LiquidCrystal.h>
+//#include <LiquidCrystal440.h>
 #include <avr/pgmspace.h>
 
 // initialize the library with the numbers of the interface pins
@@ -550,12 +551,16 @@ void setup() {
  // feed noise from unconnected pin to random:
  randomSeed(analogRead(5));
  // set up the LCD's number of rows and columns: 
- lcd.begin(16, 2);       
+ lcd.begin(20, 4);       
  // set the cursor to column 0, line 0
  lcd.setCursor(0, 0);
- lcd.print("*Tick Tick Boom*");
-lcd.setCursor(1, 1);
-lcd.print("Push to start!");
+ lcd.print("********************");
+ lcd.setCursor(0,1);
+ lcd.print("** Tick Tick Boom **");
+ lcd.setCursor(0, 2);
+ lcd.print("** Push to start! **");
+ lcd.setCursor(0, 3);
+ lcd.print("********************");
 }
 
 // main loop
